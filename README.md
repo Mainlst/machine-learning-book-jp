@@ -1,4 +1,57 @@
-# *Machine Learning with PyTorch and Scikit-Learn* Book
+# Machine Learning with PyTorch and Scikit-Learn 日本語メモ
+
+このリポジトリは、Sebastian Raschka ほか著 *Machine Learning with PyTorch and Scikit-Learn* に付属する公式ノートブックをもとにした **非公式日本語訳＆学習メモ集** です。翻訳と補足は有志によるもので、出版社や著者とは無関係です。詳細な帰属情報は `NOTICE.md` を参照してください。
+
+原著リポジトリ: <https://github.com/rasbt/machine-learning-book>
+
+## 勉強用・雑多OKのポリシー
+
+- 学習ノート、訳語の検討メモ、章ごとの補遺など **自由な草稿の置き場** として利用します。
+- 原著の本文を逐語訳するのではなく、理解の助けとなる要約・注釈・コード補足を中心にします。
+- 訳語統一は `GLOSSARY.md`、翻訳ルールは `TRANSLATION_GUIDE.md` に整理しています。更新時は必ず確認してください。
+
+## リポジトリ構成ハイライト
+
+- `ch01/` 〜 `ch19/`: 書籍各章のノートブック & Python スクリプト
+- `ERRATA/`: 誤植や補足説明のメモ
+- `supplementary/`: Colab での実行ガイドなど追加資料
+- ルート: 翻訳作業向けのメタ情報 (`NOTICE.md`, `GLOSSARY.md`, `TRANSLATION_GUIDE.md` など)
+
+章別 README やノートブックにも和訳メモを追加する場合、ここで定めた方針との整合性を保ってください。
+
+## セットアップ手順
+
+1. Anaconda / Miniconda をインストール
+2. 環境ファイルから仮想環境を作成
+
+   ```bash
+   conda env create -f environment.yml
+   conda activate mlbook-ja
+   ```
+
+3. `jupyter lab` もしくは `jupyter notebook` を起動し、必要な章のノートブックを開く
+
+GPU を利用する場合は PyTorch のインストール手順に応じて適宜バージョンを変更してください。最小構成は `environment.yml` を参照するか、`python_environment_check.py` でバージョン確認ができます。
+
+## ドキュメントと運用ルール
+
+- `NOTICE.md`: 原著への帰属とライセンス表記
+- `GLOSSARY.md`: 訳語対訳と用語メモ
+- `TRANSLATION_GUIDE.md`: 訳し方・記法のガイドライン
+- `.pre-commit-config.yaml`: フォーマット確認用のフック設定（必要に応じて `pre-commit install` を実行）
+
+Pull Request を送る際は、翻訳ルールに従っているか・新規用語を `GLOSSARY.md` に追加したか等をチェックリスト形式で確認しましょう。
+
+## ライセンス
+
+- 原著ノートブックおよびコードは MIT ライセンス（`LICENSE.txt` 参照）
+- 日本語訳と追加メモも MIT ライセンスで公開します（`NOTICE.md` に表記）
+
+コントリビューションの際はライセンスとポリシーに従い、出典が必要な資料は必ず明記してください。
+
+## 謝辞
+
+原著著者の Sebastian Raschka さん、Yuxi (Hayden) Liu さん、Vahid Mirjalili さんに感謝します。また、翻訳と補足を手伝ってくださる全てのコントリビュータに感謝いたします。# *Machine Learning with PyTorch and Scikit-Learn* Book
 
 ##  Code Repository
 
@@ -21,65 +74,3 @@ Kindle ASIN: B09NW48MR1
 - [Packt link](https://www.packtpub.com/product/machine-learning-with-pytorch-and-scikit-learn/9781801819312)
 - [Blog post summarizing the contents](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html)
 
-
-## Table of Contents and Code Notebooks
-
-**Helpful installation and setup instructions can be found in the [README.md file of Chapter 1](ch01/README.md)**.
-
-**In addition, Zbynek Bazanowski contributed [this helpful guide](supplementary/running-on-colab.pdf) explaining how to run the code examples on Google Colab.**
-
-**Please note that these are just the code examples accompanying the book, which we uploaded for your convenience; be aware that these notebooks may not be useful without the formulae and descriptive text.**   
-
-
-1. Machine Learning - Giving Computers the Ability to Learn from Data [[open dir](ch01)] 
-2. Training Machine Learning Algorithms for Classification [[open dir](ch02)] 
-3. A Tour of Machine Learning Classifiers Using Scikit-Learn [[open dir](ch03)] 
-4. Building Good Training Sets – Data Pre-Processing [[open dir](ch04)] 
-5. Compressing Data via Dimensionality Reduction [[open dir](ch05)] 
-6. Learning Best Practices for Model Evaluation and Hyperparameter Optimization [[open dir](ch06)]
-7. Combining Different Models for Ensemble Learning [[open dir](ch07)] 
-8. Applying Machine Learning to Sentiment Analysis  [[open dir](ch08)]  
-9. Predicting Continuous Target Variables with Regression Analysis [[open dir](ch09)] 
-10. Working with Unlabeled Data – Clustering Analysis [[open dir](ch10)] 
-11. Implementing a Multi-layer Artificial Neural Network from Scratch [[open dir](ch11)] 
-12. Parallelizing Neural Network Training with PyTorch [[open dir](ch12)] 
-13. Going Deeper -- The Mechanics of PyTorch [[open dir](ch13)] 
-14. Classifying Images with Deep Convolutional Neural Networks [[open dir](ch14)]  
-15. Modeling Sequential Data Using Recurrent Neural Networks [[open dir](ch15)]  
-16. Transformers -- Improving Natural Language Processing with Attention Mechanisms [[open dir](ch16)]  
-17. Generative Adversarial Networks for Synthesizing New Data [[open dir](ch17)]   
-18. Graph Neural Networks for Capturing Dependencies in Graph Structured Data [[open dir](ch18)]  
-19. Reinforcement Learning for Decision Making in Complex Environments [[open dir](ch19)] 
-
-
----
-
-<br>
-<br>
-
-Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. *Machine Learning with PyTorch and Scikit-Learn*. Packt Publishing, 2022.
-
-    @book{mlbook2022,  
-    address = {Birmingham, UK},  
-    author = {Sebastian Raschka, and Yuxi (Hayden) Liu, and Vahid Mirjalili},  
-    isbn = {978-1801819312},   
-    publisher = {Packt Publishing},  
-    title = {{Machine Learning with PyTorch and Scikit-Learn}},  
-    year = {2022}  
-    }
-
-​    
-
-## Coding Environment
-
-
-
-Please see the [ch01/README.md](ch01/README.md) file for setup recommendations.
-
-
-
-
-## Translations into other Languages
-
-- Serbian Translation: [Mašinsko učenje uz PyTorch i Scikit-Learn](https://knjige.kombib.rs/masinsko-ucenje-uz-pytorch-i-scikit-learn).
-ISBN: 9788673105772
